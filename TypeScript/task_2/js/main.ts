@@ -80,6 +80,14 @@ function executeWork(employee: Teacher | Director): string {
   }
 }
 
-// Exemples d'utilisation
-console.log(executeWork(createEmployee(200)));
-console.log(executeWork(createEmployee(1000)));
+// Définition du type littéral Subjects
+type Subjects = "Math" | "History";
+
+// Fonction teachClass qui utilise le type Subjects
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else if (todayClass === "History") {
+    return "Teaching History";
+  }
+}
